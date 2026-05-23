@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  
+  /* 添加暖棕色主题变量 */
+  --primary: #92400e;          /* amber-800 */
+  --primary-dark: #451a03;     /* amber-900 */
+  --primary-light: #f59e0b;    /* amber-500 */
+  --bg-warm: #fffbeb;          /* amber-50 */
+  --bg-warm-secondary: #fef3c7; /* amber-100 */
+  --text-primary: #451a03;     /* amber-900 */
+  --text-secondary: #92400e;   /* amber-800 */
+  --text-light: #d97706;       /* amber-600 */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    
+    /* 暗色模式下的暖棕色调整 */
+    --primary: #fbbf24;          /* amber-400 */
+    --primary-dark: #f59e0b;     /* amber-500 */
+    --primary-light: #fde68a;    /* amber-200 */
+    --bg-warm: #1f1611;          /* 深棕色背景 */
+    --bg-warm-secondary: #292017; /* 稍浅的深棕色 */
+    --text-primary: #fde68a;     /* amber-200 */
+    --text-secondary: #fbbf24;   /* amber-400 */
+    --text-light: #f59e0b;       /* amber-500 */
+  }
+}
+
+html {
+  background-color: #f5f0ea;
+}
+
+body {
+  background: transparent;
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.bridge-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 0.3;
+}
+
+.bridge-bg svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* 添加自定义样式类 */
+.text-huge {
+  font-size: clamp(3rem, 8vw, 8rem);
+  line-height: 0.9;
+  font-weight: 800;
+}
+
+.text-big {
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.hover-underline {
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.hover-underline:hover::after {
+  width: 100%;
+}
+
+/* 暖色调工具类 */
+.btn-warm-primary {
+  background-color: var(--primary-dark);
+  color: var(--bg-warm);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-warm-primary:hover {
+  background-color: var(--primary);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.btn-warm-secondary {
+  border: 2px solid var(--primary-dark);
+  color: var(--primary-dark);
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-warm-secondary:hover {
+  background-color: var(--primary-dark);
+  color: var(--bg-warm);
+}
+
+.card-warm {
+  background-color: var(--bg-warm);
+  border: 1px solid var(--bg-warm-secondary);
+  transition: all 0.3s ease;
+}
+
+.card-warm:hover {
+  border-color: var(--primary-light);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.text-warm-primary {
+  color: var(--text-primary);
+}
+
+.text-warm-secondary {
+  color: var(--text-secondary);
+}
+
+.text-warm-light {
+  color: var(--text-light);
+}
+
+.bg-warm {
+  background-color: var(--bg-warm);
+}
+
+.bg-warm-secondary {
+  background-color: var(--bg-warm-secondary);
+}
+
+.bg-warm-gradient {
+  background: linear-gradient(135deg, var(--bg-warm), var(--bg-warm-secondary));
+}
+
+/* 边框颜色 */
+.border-warm {
+  border-color: var(--bg-warm-secondary);
+}
+
+.border-warm-primary {
+  border-color: var(--primary);
+}

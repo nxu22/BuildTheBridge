@@ -1,0 +1,219 @@
+/* src/app/why-build-bridge-en/page.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* Language Switch - 放置在右上角 */
+.languageSwitch {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  background: rgba(245, 242, 237, 0.95);
+  padding: 10px 20px;
+  border-radius: 25px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.langBtn {
+  text-decoration: none;
+  color: #8b7355;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: 'EB Garamond', serif;
+  transition: all 0.3s ease;
+  padding: 4px 8px;
+  border-radius: 15px;
+}
+
+.langBtn:hover {
+  color: #5d4e37;
+  background: rgba(139, 115, 85, 0.1);
+}
+
+.langBtn.active {
+  color: #5d4e37;
+  font-weight: 600;
+  background: rgba(139, 115, 85, 0.15);
+}
+
+.langDivider {
+  margin: 0 12px;
+  color: #c4b59a;
+  font-size: 14px;
+}
+
+/* Base - 更优雅的衬线字体风格 */
+.bridgePage {
+  min-height: 100vh;
+  background: #f5f2ed;
+  background-image:
+    radial-gradient(circle at 25% 25%, #f8f5f0 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, #f2ede6 0%, transparent 50%);
+  font-family: 'EB Garamond', serif;
+  color: #5d4e37;
+  line-height: 1.8;
+  padding: 60px 0;
+}
+
+/* Header */
+.bridgeHeader {
+  padding: 60px 40px 80px;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.bridgeMainTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.5rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #8b7355;
+  margin-bottom: 50px;
+  letter-spacing: 3px;
+  text-shadow: 0 2px 4px rgba(139, 115, 85, 0.1);
+  line-height: 1.1;
+}
+
+.ornateDivider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.ornateDividerLine {
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #8b7355, transparent);
+}
+
+.ornateDividerSymbol {
+  margin: 0 20px;
+  font-size: 20px;
+  color: #8b7355;
+  font-weight: 400;
+}
+
+.bridgeSubtitle {
+  font-size: 20px;
+  font-weight: 400;
+  font-style: italic;
+  font-family: 'Playfair Display', serif;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #6b5b47;
+  line-height: 1.6;
+}
+
+/* Main Content - 更优雅的正文字体 */
+.bridgeMain {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 60px 100px;
+}
+
+.bridgeSection {
+  margin-bottom: 80px;
+}
+
+.bridgeContentText {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.9;
+  margin-bottom: 35px;
+  color: #5d4e37;
+  text-align: justify;
+  text-indent: 0;
+  letter-spacing: 0.5px;
+  word-spacing: 1.5px;
+  font-family: 'EB Garamond', serif;
+}
+
+.bridgeContentText:first-child {
+  margin-top: 0;
+}
+
+.bridgeContentText:last-child {
+  margin-bottom: 0;
+}
+
+/* 添加段落之间的视觉分隔 */
+.bridgeContentText + .bridgeContentText {
+  margin-top: 40px;
+}
+
+/* 特殊强调文本样式 */
+.bridgeContentText em {
+  font-style: italic;
+  color: #8b7355;
+  font-weight: 500;
+}
+
+/* Mobile响应式 */
+@media (max-width: 768px) {
+  .bridgePage {
+    padding: 40px 0;
+  }
+ 
+  .bridgeMainTitle {
+    font-size: 3.5rem;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+  }
+ 
+  .bridgeHeader {
+    padding: 60px 20px 60px;
+  }
+ 
+  .bridgeMain {
+    padding: 0 30px 80px;
+  }
+ 
+  .bridgeContentText {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+ 
+  .ornateDividerLine {
+    width: 80px;
+  }
+ 
+  .bridgeSubtitle {
+    font-size: 18px;
+  }
+ 
+  .languageSwitch {
+    top: 15px;
+    right: 15px;
+    padding: 8px 16px;
+  }
+ 
+  .langBtn {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bridgeMainTitle {
+    font-size: 2.8rem;
+    letter-spacing: 1px;
+  }
+ 
+  .bridgeMain {
+    padding: 0 20px 60px;
+  }
+ 
+  .bridgeHeader {
+    padding: 40px 20px 50px;
+  }
+ 
+  .languageSwitch {
+    top: 10px;
+    right: 10px;
+    padding: 6px 12px;
+  }
+}

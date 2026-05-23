@@ -1,0 +1,11 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Centered and larger logo for better visibility -->
+  <g transform="translate(32, 32)">
+    <!-- Left circle - bigger -->
+    <circle cx="-18" cy="0" r="6" fill="black"/>
+    <!-- Right circle - bigger -->
+    <circle cx="18" cy="0" r="6" fill="black"/>
+    <!-- Connection arc - normal thickness -->
+    <path d="M -12 0 Q 0 -12 12 0" stroke="black" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

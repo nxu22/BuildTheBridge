@@ -1,0 +1,288 @@
+/* app/our-approach/page.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+.approachPage {
+  min-height: 100vh;
+  background: #f5f2ed;
+  background-image:
+    radial-gradient(circle at 25% 25%, #f8f5f0 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, #f2ede6 0%, transparent 50%);
+  font-family: 'EB Garamond', serif;
+  color: #5d4e37;
+  /* Add top margin to account for fixed navigation (80px) */
+  margin-top: 80px;
+}
+
+/* Hero Section */
+.heroSection {
+  /* Reduced top padding since we now have margin-top on the page */
+  padding: 80px 40px 120px;
+  text-align: center;
+  background: linear-gradient(135deg, #8b7355 0%, #6b5b47 100%);
+  color: #f5f2ed;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.mainTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: italic;
+  opacity: 0.9;
+  margin-bottom: 40px;
+  font-family: 'Playfair Display', serif;
+}
+
+.ornateDivider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.dividerLine {
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #f5f2ed, transparent);
+}
+
+.dividerSymbol {
+  margin: 0 20px;
+  font-size: 20px;
+  color: #f5f2ed;
+  font-weight: 400;
+}
+
+/* Content Sections */
+.contentSection {
+  padding: 80px 40px;
+}
+
+.servicesSection {
+  padding: 80px 40px;
+  background: rgba(139, 115, 85, 0.05);
+}
+
+.advantagesSection {
+  padding: 80px 40px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #8b7355;
+  font-style: italic;
+}
+
+/* Points Grid - 改为2x2对称布局 */
+.pointsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 60px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pointCard {
+  background: rgba(245, 242, 237, 0.8);
+  padding: 40px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(139, 115, 85, 0.1);
+  border: 1px solid rgba(139, 115, 85, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.pointCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(139, 115, 85, 0.15);
+}
+
+.pointTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #8b7355;
+  margin-bottom: 15px;
+}
+
+.pointDescription {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #5d4e37;
+}
+
+/* Phase Sections - 居中对齐 */
+.phaseSection {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.phaseTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #8b7355;
+  margin-bottom: 30px;
+  font-style: italic;
+  text-align: center;
+}
+
+.phaseList {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.phaseItem {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  padding-left: 0;
+  position: relative;
+  color: #5d4e37;
+  text-align: center;
+}
+
+/* Advantages Grid - 改为2x2对称布局 */
+.advantagesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.advantageCard {
+  background: linear-gradient(135deg, #8b7355 0%, #6b5b47 100%);
+  color: #f5f2ed;
+  padding: 40px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(139, 115, 85, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.advantageCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(139, 115, 85, 0.3);
+}
+
+.advantageTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #f5f2ed;
+}
+
+.advantageDescription {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .heroSection {
+    /* Reduced padding since we have margin-top on page */
+    padding: 60px 20px 80px;
+    min-height: 40vh;
+  }
+
+  .mainTitle {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .contentSection,
+  .servicesSection,
+  .advantagesSection {
+    padding: 60px 20px;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .pointsGrid,
+  .advantagesGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 30px;
+  }
+
+  .pointCard,
+  .advantageCard {
+    padding: 30px 20px;
+  }
+
+  .phaseTitle {
+    font-size: 1.5rem;
+  }
+
+  .dividerLine {
+    width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainTitle {
+    font-size: 2.2rem;
+  }
+
+  .heroSection {
+    /* Reduced padding for mobile */
+    padding: 40px 15px 50px;
+  }
+
+  .contentSection,
+  .servicesSection,
+  .advantagesSection {
+    padding: 50px 15px;
+  }
+}
