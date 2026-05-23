@@ -5,7 +5,6 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 export default function CasesPage() {
-  const [language, setLanguage] = useState<"en" | "zh">("en");
   const [currentCase, setCurrentCase] = useState(0);
 
   const content = {
@@ -180,12 +179,8 @@ export default function CasesPage() {
     },
   };
 
-  const t = content[language];
+  const t = content.en;
   const totalCases = t.cases.length;
-
-  const handleLanguageToggle = () => {
-    setLanguage(language === "en" ? "zh" : "en");
-  };
 
   const nextCase = () => {
     setCurrentCase((prev) => (prev + 1) % totalCases);
@@ -199,7 +194,7 @@ export default function CasesPage() {
 
   return (
     <>
-      <Navigation language={language} onLanguageToggle={handleLanguageToggle} />
+      <Navigation />
 
       <div className="min-h-screen" style={{ backgroundColor: "#f5f2ed" }}>
         {/* Header Section */}
@@ -314,7 +309,7 @@ export default function CasesPage() {
         </section>
       </div>
 
-      <Footer language={language} />
+      <Footer />
     </>
   );
 }

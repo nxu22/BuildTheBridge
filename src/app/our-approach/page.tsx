@@ -1,12 +1,10 @@
 // app/our-approach/page.tsx
 "use client";
-import { useState } from "react";
 import styles from "./page.module.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 export default function OurApproachPage() {
-  const [language, setLanguage] = useState<"en" | "zh">("en");
 
   const content = {
     en: {
@@ -328,15 +326,11 @@ export default function OurApproachPage() {
     },
   };
 
-  const t = content[language];
-
-  const handleLanguageToggle = () => {
-    setLanguage(language === "en" ? "zh" : "en");
-  };
+  const t = content.en;
 
   return (
     <>
-      <Navigation language={language} onLanguageToggle={handleLanguageToggle} />
+      <Navigation />
       <div className={styles.approachPage}>
         {/* Hero Section */}
         <section className={styles.heroSection}>
@@ -421,7 +415,7 @@ export default function OurApproachPage() {
           </section>
         </div>
       </div>
-      <Footer language={language} />
+      <Footer />
     </>
   );
 }

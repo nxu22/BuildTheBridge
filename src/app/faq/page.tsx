@@ -5,7 +5,6 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 export default function FAQPage() {
-  const [language, setLanguage] = useState<"en" | "zh">("en");
   const [openQuestion, setOpenQuestion] = useState<string | null>(null);
 
   const toggleQuestion = (questionId: string) => {
@@ -115,15 +114,11 @@ export default function FAQPage() {
     },
   };
 
-  const t = content[language];
-
-  const handleLanguageToggle = () => {
-    setLanguage(language === "en" ? "zh" : "en");
-  };
+  const t = content.en;
 
   return (
     <>
-      <Navigation language={language} onLanguageToggle={handleLanguageToggle} />
+      <Navigation />
 
       <div className="min-h-screen" style={{ backgroundColor: "#f5f2ed" }}>
         {/* Header Section */}
@@ -179,7 +174,7 @@ export default function FAQPage() {
         </section>
       </div>
 
-      <Footer language={language} />
+      <Footer />
     </>
   );
 }
